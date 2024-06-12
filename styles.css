@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-container, .filter-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.calendar {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    position: relative;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.day {
+    height: 100px;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+}
+
+.event {
+    background-color: #4CAF50;
+    color: white;
+    padding: 2px 5px;
+    margin: 5px auto; /* Centrer l'événement horizontalement */
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    width: calc(100% - 10px); /* Assurez-vous que l'événement ne dépasse pas la cellule */
+}
+
+.absent {
+    background-color: #FF6347;
+}
+
+.event-details {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positionner en dessous de l'événement */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 5px;
+    z-index: 100;
+    width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}
+
+.event:hover .event-details {
+    display: block;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.context-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.context-menu button:hover {
+    background-color: #f2f2f2;
+}
